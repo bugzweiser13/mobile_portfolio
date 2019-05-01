@@ -16,8 +16,8 @@ General Layout
 */
 
 .container {
-	width: 100%;
-	max-width: 960px;
+	width: 98%;
+	max-width: 980px;
 	margin: 0 auto;
 	clear: both;
 }
@@ -25,7 +25,7 @@ h1,
 h2,
 h3,
 p {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 h1,
@@ -58,14 +58,13 @@ Universal Header Layout
     position: fixed;
 	z-index: 99;
 	width: 100%;
-	overflow: auto;
 	color: #fff;
 	background: #fff;
-	border-bottom: 3px solid #ccc;
+	border-bottom: 2px solid #ccc;
 }
 #logo {
 	float: left;
-	width: 275px;
+	width: 640px;
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-size: 30px;
 	font-weight: 700;
@@ -75,15 +74,12 @@ Universal Header Layout
 	text-decoration: none;
 	background: #4aaaa5;
 }
-nav {
-	float: right;
-	margin-top: 25px;
+#links {
+	font-size: 12px;
+	text-decoration: none;
 }
-nav a {
-	display: inline-block;
+#links a {
 	padding-left: 15px;
-	margin-left: 15px;
-	line-height: 18px;
 	color: #999;
     text-decoration: none;
     text-transform: uppercase;
@@ -101,8 +97,7 @@ Universal Main Body Layout
 */
 
 #main_container {
-    padding-top: 110px;
-	min-height: calc(100vh - 70px);
+    padding-top: 135px;
 	overflow: auto;
 }
 .main_body {
@@ -114,10 +109,8 @@ Universal Main Body Layout
     text-align: justify;
 	background: #fff;
 	border: 1px solid #ddd;
-	
 }
 .main_body img {
-    float: left;
     margin-right: 1%;
 }
 
@@ -127,7 +120,7 @@ Universal Footer Layout
 =============================================
 */
 .footer {
-	height: 70px;
+	height: 95px;
     border-top: 8px solid #4aaaa5;
     background: #666666;
     padding: 20px;
@@ -143,14 +136,7 @@ Portfolio Page Layout
 .work {
 	position: relative;
 	float: left;
-	width: 285px;
-	margin: 5px 10px 5px;
-	overflow: auto;
 }
-
-/*.work:nth-child(even) {
-	margin-right: 10px;
-}*/
 
 .work img {
 	width: 100%;
@@ -216,3 +202,68 @@ button[type=reset] {
 	background: #4aaaa5;
 	border: 0 none;
 }
+
+/*
+=================================================
+Responsive Attributes
+=================================================
+*/
+
+/* For mobile phones: */
+ @media only screen and (min-width: 640px){
+	
+	#logo  {width: 100%;}
+	#me2   {width: 100%;}
+	#links {
+		width: 100%;
+		text-align: center;
+	}
+	.main_body {
+		line-height: 30px;
+	}
+  }
+
+  @media only screen and (min-width: 768px) {
+	/* For tablets: */
+	.container {width: 98%;}
+
+
+  }
+  
+  @media only screen and (min-width: 980px) {
+	/* For desktop: */
+	.container {width: 98%;}
+	#main_container {
+		padding-top: 100px;
+		overflow: auto;
+	}
+	#header {
+		width: 100%;
+	}
+	#logo {
+		float: left;
+		width: 275px;
+	}	
+	#links {
+		margin: 0 0 0 30%;
+		padding: 25px;
+		font-size: 14px;
+	}	
+	.work{
+		position: relative;
+		float: left;
+		width: 285px;
+		margin: 5px 10px 5px;	
+	}
+	#me2 {
+		float: left;
+		width: 30%;
+	}
+	.footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+  }
